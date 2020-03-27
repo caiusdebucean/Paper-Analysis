@@ -22,7 +22,7 @@ This takes the image in and runs it through the backbone chosen.
 This takes the layers specified in the config.py file, mainly in:
 >cfg.backbone.selected_layers
 
-Then it adds downsampling layers and a layer is as the **Protonet** input through the config variable:
+Then it adds downsampling layers, afterwards a layer is chosen as the inputfor the **Protonet** through the config variable:
 >cfg.mask_proto_src
 
 The FPN presents the following output:
