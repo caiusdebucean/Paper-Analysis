@@ -30,10 +30,15 @@ The FPN presents the following output:
 
 There are 3 coefficients as outputs: **class c, 4 bounding box regressors, k mask coefficients(corresponding to each prototype)**. This means that for every anchor (instance of an object) we produce **4 + c + k** per anchor. A smooth-L1 loss is used to train the box regressors and encode box regression coordinates in the same way as SSD. We apply tanh over **_k_** to be able to subtract them from one another. To tweak and edit this **_k_** parameter, check:
 >yolact.py - line 425
-config.py - line 693
-functions.py - line 209
-functions.py - lines 168 - 187 - 200
-**_It is useful to check and calculate the input presented in config.py separately, in order to understand how it is used in the rest of the code._**
+
+>config.py - line 693
+
+>functions.py - line 209
+
+>functions.py - lines 168 - 187 - 200
+
+>**_It is useful to check and calculate the input presented in config.py separately, in order to understand how it is used in the rest of the code._**
+
 ### Protonet
 This takes the layer from the **FPN** and creates **_prototypes_**. We can also attach to the input layer a grid, to add grid features, but it is not specified what they are useful for. The Protonet has the following architecture:
 <div style="text-align:center"><img src="https://i.imgur.com/pDJucl0.png" /></div> 
