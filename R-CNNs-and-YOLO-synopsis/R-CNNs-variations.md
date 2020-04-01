@@ -4,7 +4,7 @@
 
 We use a region proposal algorithm to produce a limited set of cropped regions in an image. These are called **Regions of Interests _(RoIs)_**. Since the RoIs are of varying sizes, we need to **standardize** them to a chosen size. 
 The R-CNN outputs a class score (this is a _classification_ task) and bounding box (_bb_) coordinates - _x,y_ for the center of the bb, width _w_ and height _h_ of the bb - for every input RoI (this is a _regression_ task).
-**Observation**: Unlike the variations of R-CNNs, the original architecture does not explicitly produce a confidence score to detect whether an object is present in a RoI. Instead, it employs an approach of detecting the probability of a RoI being background.
+**Observation**: Unlike the variations of R-CNNs, the original architecture does not explicitly produce a confidence score to detect whether an object is present in a RoI. Instead, it employs an approach of detecting the probability of a RoI being background. So in the end, R-CNN decieds if a RoI is a class object, or background.
 
 <div style="text-align:center"><img src="https://i.imgur.com/DMuIwai.png"/></div>
 
@@ -22,7 +22,7 @@ _Explanation:_ **RoI pooling** takes in a rectangular region of any size and per
 ## Faster R-CNN
 
 This architecture is similar to the rest, but it focuses on decreasing the time it takes to form region proposals. The images are still running through all the CNN until we have feature maps, but this time it looks at the produced feature map and takes a sliding window approach for binary classification on the presence of an object in that window.
-Faster R-CNN uses a set of varying-size defined **anchor boxes** (_predefined boxes e.g. wide and short or tall or thin_). These are used to generate possible RoIs or _proposals_. For each proposal, there is a binary classification that detects if an object is present in that region. If a region has a small probability of containing an object, it is discarded.
+Faster R-CNN uses a set of varying-size defined **anchor boxes** (_predefined boxes e.g. wide and short or tall and thin_). These are used to generate possible RoIs or _proposals_. For each proposal, there is a binary classification that detects if an object is present in that region. If a region has a small probability of containing an object, it is discarded. Those that have a bigger probability are runned through the classificator and box regressor.
 
 <div style="text-align:center"><img src="https://i.imgur.com/zB7IDS1.png"/></div>
 
