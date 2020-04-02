@@ -76,6 +76,28 @@ where _P_ is an _h x w x k_ matrix of prototype masks and _C_ is a _n x k_ matri
 
 They are sampled at random, which means that a big number of redundant and repetitive masks will only dilute the complexity of small objects the model will detect. 
 
+### Test results and in-depth Visualisation
+
+The model used for inference was trained on the COCO dataset, with a _k_ number of **32**. That means that we have **32 prototypes** and **32 coefficients** for each object instance.
+Given the following image from the COCO dataset website as our test image:
+
+<div style="text-align:center"><img src="https://i.imgur.com/U69UHjM.jpg" width = 60%/></div> 
+
+We have 18 object instances detected in the test image. This means that we have 18 groups of 32 protypes and coefficients. Here are a set of prototypes and coefficients for one instance: 
+
+<div style="text-align:center"><img src="https://i.imgur.com/GU0Vo4v.png"/></div> 
+
+Linearly combining all the _coefficients_ and _prototypes_ shown above, we get the final predicted mask for that one instance. After predicting for each 18 instances, these are the final masks:
+
+<div style="text-align:center"><img src="https://i.imgur.com/HEzgqYA.png"/></div> 
+
+The original image with the predicted masks are shown below:
+
+<div style="text-align:center"><img src="https://i.imgur.com/ISGYkUx.png"/width = 70%></div> 
+
+All sets of _coefficients_ and _prototypes_ are found in the _test_results_ directory. 
+
+
 ### Conclusion and future experimentation
 To go over some of the information presented above, we pointed out that the deeper backbone features we have, the better yolact will predict higher quality masks and perform better on **_small objects_**. Therefore, we can assume that the model is inherently performing better on _bigger objects_, and struggles more with _smaller objects_. To better perform on smaller objects, it is rational to think that the bigger number of **prototypes** we use, the better it will be at accurately predicting _smaller objects_. Although the paper results present that there is no increase in the _AP_ metric, as seen in this table:
 <div style="text-align:center"><img src="https://i.imgur.com/wRswy1k.png" /></div> 
