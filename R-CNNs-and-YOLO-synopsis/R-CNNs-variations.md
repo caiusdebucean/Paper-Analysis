@@ -1,5 +1,8 @@
 # R-CNN variations synopsis
-
+_This synopsis is based on the YOLO algorithm, found at:_
+* https://arxiv.org/abs/1311.2524
+* https://arxiv.org/abs/1504.08083
+* https://arxiv.org/abs/1506.01497
 ## R-CNN _(original)_
 
 We use a region proposal algorithm to produce a limited set of cropped regions in an image. These are called **Regions of Interests _(RoIs)_**. Since the RoIs are of varying sizes, we need to **standardize** them to a chosen size. 
@@ -15,9 +18,8 @@ This architecture runs the image through the CNN only **once**. A the end of the
 <div style="text-align:center"><img src="https://i.imgur.com/iCESs09.png"/></div>
 
 This method is faster, as it only runs through the CNN once, but overall is still slow, as its test time is dominated by the time required to create region proposals.
-_Explanation:_ **RoI pooling** takes in a rectangular region of any size and performs _maxpooling_ on that region in pieces such that the output is a fixed shape.
-
-<div style="text-align:center"><img src="https://video.udacity-data.com/topher/2018/May/5aeb9dc6_roi-pooling-gif/roi-pooling-gif.gif" width = 60%/></div>
+_Explanation:_ **RoI pooling** takes in a rectangular region of any size and performs _maxpooling_ on that region in pieces such that the output is a fixed shape. The animation below is credited to _deepsense.ai_.
+<div style="text-align:center"><img src="https://media.giphy.com/media/Tk8CNxVy5IfLWL7Xv0/giphy.gif"></img></div>
 
 ## Faster R-CNN
 
@@ -28,7 +30,6 @@ Faster R-CNN uses a set of varying-size defined **anchor boxes** (_predefined bo
 
 The speed of Faster R-CNN is decreased compared to the others because it reduces the time it takes to generate and decide on region proposals. An improved method that works in real-time is called YOLO, which gets rid of region proposals per se, and uses a predefined grid.
 
-<div>___<d/iv>
 
 
 
@@ -36,6 +37,6 @@ The speed of Faster R-CNN is decreased compared to the others because it reduces
 
 
 
-
-<div>*<i>The architectural photos are taken from Udacity lectures and the ROI pooling animation from deepsense.ai</i></div>
+___
+<div>*<i>The information structurality is inspired by the Udacity CV Nanodegree, where the most images are taken from. </i></div>
 <div>&copy;Debucean Caius-Ioan @ github.com/caiusdebucean</div>
