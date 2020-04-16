@@ -1,5 +1,5 @@
 # R-CNN variations synopsis
-_This synopsis is based on the YOLO algorithm, found at:_
+_This synopsis is based on the R-CNN/Fast R-CNN/Faster R-CNN algorithms, found at:_
 * https://arxiv.org/abs/1311.2524
 * https://arxiv.org/abs/1504.08083
 * https://arxiv.org/abs/1506.01497
