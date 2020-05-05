@@ -1,5 +1,5 @@
 # Papers Personal Analysis
-This is a repo for documents I have done concerning **reproduction** and **analysis** on _SoTA_ papers at the moment of their creation in time.
+This is a repo for documents I have done concerning **reproductions** and **analyses** on _SoTA_ papers at the moment of their creation in time. _Because of differences in Markdown Preview and actual GitHub Visual Interface, there will be a multitude of small corrective commits done on the fly._
 
 The format and extension of the documents are ever-changing and only representative of my personal formatting choices as I try to learn the craft and do a better job. These analyses will range between mere synopses *(shorter and more concise)* and bold reproduction papers *(detailed and dissected)*.
 
