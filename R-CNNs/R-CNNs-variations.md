@@ -1,8 +1,26 @@
 # R-CNN variations synopsis
+<<<<<<< HEAD:R-CNNs/R-CNNs-variations.md
+The following synopsis is based on three papers: 
+**1.** *Rich feature hierarchies for accurate object detection and semantic segmentation (R-CNN)* - https://arxiv.org/abs/1311.2524
+**2.** *Fast R-CNN* - https://arxiv.org/abs/1504.08083
+**3.** *Faster R-CNN* - https://arxiv.org/abs/1506.01497
+
+The code for these papers can be found on these GitHub repositories:
+1. [R-CNN](https://github.com/rbgirshick/rcnn)
+2. [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn)
+3. [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn)
+
+||||||| merged common ancestors
+_This synopsis is based on the YOLO algorithm, found at:_
+* https://arxiv.org/abs/1311.2524
+* https://arxiv.org/abs/1504.08083
+* https://arxiv.org/abs/1506.01497
+=======
 _This synopsis is based on the R-CNN/Fast R-CNN/Faster R-CNN algorithms, found at:_
 * https://arxiv.org/abs/1311.2524
 * https://arxiv.org/abs/1504.08083
 * https://arxiv.org/abs/1506.01497
+>>>>>>> 566e07593d3d96befaaedae4e13b1d71bb30bd25:R-CNNs-and-YOLO-synopsis/R-CNNs-variations.md
 ## R-CNN _(original)_
 
 We use a region proposal algorithm to produce a limited set of cropped regions in an image. These are called **Regions of Interests _(RoIs)_**. Since the RoIs are of varying sizes, we need to **standardize** them to a chosen size. 

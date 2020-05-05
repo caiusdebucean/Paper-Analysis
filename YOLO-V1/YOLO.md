@@ -1,8 +1,11 @@
 # YOLO synopsis
-_This synopsis is based on the YOLO algorithm, found at:_
-* https://arxiv.org/abs/1506.02640
-* https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection
+The following analysis is based on _You Only Look Once: Unified, Real-Time Object Detection_ paper:
 
+* https://arxiv.org/abs/1506.02640
+
+The code can be found on this GitHub [repository](https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection)
+
+_Details can be found on https://pjreddie.com/darknet/yolo/_
 ## Improvements from previous R-CNNs
 
 Compared to other R-CNNs, where there are two outputs, and the loss is a weighted combination of classification and regression losses, the YOLO algorithm merges the two outputs into **a single one**.

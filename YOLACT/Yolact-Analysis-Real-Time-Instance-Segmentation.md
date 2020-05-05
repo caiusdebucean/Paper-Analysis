@@ -1,8 +1,19 @@
-# How do masks work in Yolact and how can we improve them for smaller objects
-The following analysis is based on _Yolact and Yolact++: Real-time Instance Segmentation_ papers:
+
+#YOLACT: Real-time Instance Segmentation
+
+The following analysis is based on _YOLACT and YOLACT++: Real-time Instance Segmentation_ papers:
 1. https://arxiv.org/abs/1904.02689
 2. https://arxiv.org/abs/1912.06218
-And on the code found at https://github.com/dbolya/yolact.
+   
+The code found on this GitHub [repository](https://github.com/dbolya/yolact).
+
+### Introduction
+
+_YOLACT_ is a novel method for real-time instance segmentation. This means that the output is represented by multiple masks, one for each instance of a detected object. This analysis aims to review, reproduce and improve _YOLACT_.
+
+## How do masks work in Yolact and how can we improve them for smaller objects
+
+Besides reproducing the paper, I choose to study further and try to come forward with a few internal solutions to one of _YOLACT's_ weakness: small objects or rather featureless objects (because of downsampling loss of texture). In order to to that I will first explain some details. 
 
 ### There are 2 options to generate masks in the code:
 In the  *config.py* file the class Config has 2 variables:
