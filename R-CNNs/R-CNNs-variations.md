@@ -2,8 +2,11 @@
 # R-CNN variations synopsis
 
 The following synopsis is based on three papers: 
+
 **1.** *Rich feature hierarchies for accurate object detection and semantic segmentation (R-CNN)* - https://arxiv.org/abs/1311.2524
+
 **2.** *Fast R-CNN* - https://arxiv.org/abs/1504.08083
+
 **3.** *Faster R-CNN* - https://arxiv.org/abs/1506.01497
 
 The code for these papers can be found on these GitHub repositories:
