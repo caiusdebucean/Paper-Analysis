@@ -1,5 +1,5 @@
 
-#YOLACT: Real-time Instance Segmentation
+# YOLACT: Real-time Instance Segmentation
 
 The following analysis is based on _YOLACT and YOLACT++: Real-time Instance Segmentation_ papers:
 1. https://arxiv.org/abs/1904.02689
