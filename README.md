@@ -8,9 +8,13 @@ An observation can be made to the fact that I like to refer to myself in _plural
 Papers reviewed _so far_:
 
 **1. R-CNN**, **Fast R-CNN** and **Faster R-CNN** *(Object detection)*
+
 **2. YOLO** *(Real-Time Object detection)*
+
 **3. YOLACT** *(Real-Time Instance Segmentation)*
+
 **4. FCOS** *(One-Stage Object Detection)* **-in progress-**
+
 **5. CenterMask** *(Real-Time Anchor-Free Instance Segmentation)* **-in progress-**
 
 
