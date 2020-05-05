@@ -6,6 +6,7 @@ The format and extension of the documents are ever-changing and only representat
 An observation can be made to the fact that I like to refer to myself in _plural_, in hopes of finding an interested party in partaking this past-time activity.
 
 Papers reviewed _so far_:
+
 **1. R-CNN**, **Fast R-CNN** and **Faster R-CNN** *(Object detection)*
 **2. YOLO** *(Real-Time Object detection)*
 **3. YOLACT** *(Real-Time Instance Segmentation)*
