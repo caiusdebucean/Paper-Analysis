@@ -6,6 +6,9 @@ The following analysis is based on _You Only Look Once: Unified, Real-Time Objec
 The code can be found on this GitHub [repository](https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection)
 
 _Details can be found on https://pjreddie.com/darknet/yolo/_
+
+___
+
 ## Improvements from previous R-CNNs
 
 Compared to other R-CNNs, where there are two outputs, and the loss is a weighted combination of classification and regression losses, the YOLO algorithm merges the two outputs into **a single one**.
@@ -59,5 +62,5 @@ The main drawback to this is the case when two objects of the same shape, so the
 To summarize the algorithm, YOLO breaks up the image into a grid, then the CNN produces an output vector, size-dependent on the _number of classes_ and _number of existing anchor boxes_, for each grid cell. _NMS_ then gets rid of the bounding boxes that have a _Pc_ value lower than a certain threshold. Afterwards, it selects the bounding boxes with the highest _Pc_ value, and removes, based on IoU, the bounding boxes that are too similar to the _high-Pc_ bounding boxes.
 
 ___
-<div>*<i>The information structurality is inspired by the Udacity CV Nanodegree, where the images are taken from.</i></div>
-<div>&copy;Debucean Caius-Ioan @ github.com/caiusdebucean</div>
+<div>*<i>The information structurality is inspired by the Udacity CV Nanodegree, where the images are taken from. Credits to them.</i></div>
+<div>&copy;<b>Debucean Caius-Ioan</b> @ github.com/caiusdebucean</div>

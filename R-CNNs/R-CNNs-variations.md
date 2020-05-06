@@ -14,6 +14,8 @@ The code for these papers can be found on these GitHub repositories:
 2. [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn)
 3. [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn)
 
+___
+
 ## R-CNN _(original)_
 
 We use a region proposal algorithm to produce a limited set of cropped regions in an image. These are called **Regions of Interests _(RoIs)_**. Since the RoIs are of varying sizes, we need to **standardize** them to a chosen size. 
@@ -49,5 +51,5 @@ The speed of Faster R-CNN is decreased compared to the others because it reduces
 
 
 ___
-<div>*<i>The information structurality is inspired by the Udacity CV Nanodegree, where the most images are taken from. </i></div>
-<div>&copy;Debucean Caius-Ioan @ github.com/caiusdebucean</div>
+<div>*<i>The information structurality is inspired by the Udacity CV Nanodegree, where the most images are taken from. Credits to them. </i></div>
+<div>&copy;<b>Debucean Caius-Ioan</b> @ github.com/caiusdebucean</div>

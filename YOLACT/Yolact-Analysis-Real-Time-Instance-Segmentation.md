@@ -7,9 +7,13 @@ The following analysis is based on _YOLACT and YOLACT++: Real-time Instance Segm
    
 The code found on this GitHub [repository](https://github.com/dbolya/yolact).
 
+___
+
 ### Introduction
 
 _YOLACT_ is a novel method for real-time instance segmentation. This means that the output is represented by multiple masks, one for each instance of a detected object. This analysis aims to review, reproduce and improve _YOLACT_.
+
+<div>*<i>All the code indications are made on a clean Yolact repository at the date of creation</i></div>
 
 ## How do masks work in Yolact and how can we improve them for smaller objects
 
@@ -121,6 +125,7 @@ Also, to avoid **leakage**, there may be attempts to try and reduce the bounding
 
 Another proposition comes to the assumption that we want to detect small objects on high-resolution frames. Supposing enough computation power is available, *segmenting* the frame is an option, with the risk of having a segmentation edge over an object. An alternative would be to **crop the input image to an AoI** (Area of Interest), thus making the small objects "bigger" in reference to total resolution.
 
-<div>*<i>All the code indications are made on a clean Yolact repository at the date of creation</i></div>
-<div>&copy;Debucean Caius-Ioan @ github.com/caiusdebucean</div>
+
+<div><i>All photos are credited to the original paper (source presented above)</i></div>
+<div>&copy; <b>Debucean Caius-Ioan</b> @ github.com/caiusdebucean</div>
 <div> <i>First created on March 2020 during COVID-19 quarantine </i></div>
