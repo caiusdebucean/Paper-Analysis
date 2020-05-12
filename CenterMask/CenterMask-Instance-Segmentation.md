@@ -72,8 +72,11 @@ The comparison looks like this:
 <br />
 
 CenterMask introduces an adaptation in RoI Align, by modifying the original Equation:
+
 ![Original](https://i.imgur.com/MJ6jf8H.png)
+
 which is adapted to ImageNet pretraining size _224_, to:
+
 ![New](https://i.imgur.com/i18wqzd.png)
 
 The variable _k_ represents the level associated with _(P3, P4, ... , P7)_. If _k is lower than P3, it's clamped to the minimum level. Alternatively, if an area of a RoI is bigger than half the input area, then RoI is assigned to the highest feature level (_e.g. P7_).

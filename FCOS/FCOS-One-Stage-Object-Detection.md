@@ -10,9 +10,9 @@ ___
 ## Introduction
 
 **FCOS** is a fully convolutional one-stage object detector that solves object detection in a per-pixel prediction fashion. *(Similar to Semantic Segmentation)*
-The main difference between this method and other traditional methods such as RetinaNet, SSD, YOLO, or R-CNN variations, is that its one-stage, which means that it does not require a Region Proposal Network. Moreover, it's shown that FCOS cand be used as an RPN in other two-stage solutions. Lacking an RPN usually means sacrificing accuracy for inference speed. 
+The main difference between this method and other traditional methods such as R-CNN variations, is that its one-stage, which means that it does not require a Region Proposal Network. Moreover, it's shown that FCOS cand be used as an RPN in other two-stage solutions. Lacking an RPN usually means sacrificing accuracy for inference speed. 
 
-Another difference is that this method does not require predefined anchor boxes, which results in fewer hyperparameters to tweak and less complicated computation. 
+Furthermore, a difference between other one-stage architectures such as YOLO or SSD is that this method does not require predefined anchor boxes, which results in fewer hyperparameters to tweak and less complicated computation. 
 This method also introduces a concept called _Centerness_ and it has a dedicated branch that predicts the deviation of a pixel to the center of its corresponding bounding box.
 
 ## Architecture
@@ -20,6 +20,8 @@ This method also introduces a concept called _Centerness_ and it has a dedicated
 The network is composed of 3 parts: a **Convolutional Backbone**, a **Feature Pyramid Network** and **Output Heads** that encode *Centerness*, *Classes* and *4D Box Regressors*.
 
 ![Architecture](https://i.imgur.com/8U3USja.png)
+
+As it can be seen, *FCOS* is inspired by *RetinaNet's* multi-level outputs.
 
 ## FCOS Heads _(output)_
 
